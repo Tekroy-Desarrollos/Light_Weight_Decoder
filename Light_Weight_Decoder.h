@@ -16,6 +16,9 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 #define LW_DECODER_BUFFER_SIZE 128
 typedef struct{
     uint8_t * buffer;
@@ -46,4 +49,7 @@ float LW_Decoder_Decode_Float(Light_Weight_Decoder * lw_decoder);
 double LW_Decoder_Decode_Double(Light_Weight_Decoder * lw_decoder);
 
 char * LW_Decoder_Decode_String(Light_Weight_Decoder * lw_decoder);
+#ifdef __cplusplus
+}
+#endif
 #endif
